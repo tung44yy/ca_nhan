@@ -256,3 +256,14 @@
 		}
 
 })(jQuery);
+
+// Tự động mở tất cả các link ra tab mới
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href]').forEach(function (link) {
+    // Chỉ áp dụng cho link ra ngoài (có http hoặc https)
+    if (link.getAttribute('href').startsWith('http')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer'); // Bảo mật tốt hơn
+    }
+  });
+});
