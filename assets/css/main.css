@@ -4707,3 +4707,12 @@ input, select, textarea {
     transition: transform 0.2s ease-in-out;
     fill: #ffffff;                      /* Có thể đổi thành màu khác nếu muốn */
 }
+
+.icons a {
+  transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.icons a:hover {
+  transform: scale(1.2);                  /* Phóng to nhẹ khi hover */
+  filter: brightness(1.3);                /* Làm sáng hơn một chút */
+}
