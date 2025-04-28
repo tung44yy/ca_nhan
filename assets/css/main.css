@@ -4687,3 +4687,23 @@ input, select, textarea {
 		}
 
 	}
+/* Fix SVG icon X không bị gạch chân và căn chỉnh hover đẹp */
+.icons a {
+    text-decoration: none;               /* Xóa gạch chân cho toàn bộ icon */
+}
+
+.icons a:hover {
+    text-decoration: none;               /* Chắc chắn không underline khi hover */
+}
+
+.icons a svg {
+    width: 20px;
+    height: 20px;
+    display: block;                      /* Bảo đảm icon SVG không bị lệch */
+}
+
+.icons a:hover svg {
+    transform: scale(1.1);               /* Nhẹ nhàng phóng to khi hover */
+    transition: transform 0.2s ease-in-out;
+    fill: #ffffff;                      /* Có thể đổi thành màu khác nếu muốn */
+}
